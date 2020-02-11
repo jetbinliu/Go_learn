@@ -8,11 +8,12 @@ import (
 func main() {
 
 	//var chain chan int
-	chain := make(chan int, 100)
+	// chain := make(chan int, 100)
 	for i := 1; i <= 100; i++ {
-		go time.Sleep(40*time.Second)
-		chain <- i
-		route.Route(chain)
+		go route.Route(i)
+		// chain <- i
+		// route.Route(chain)
+		go time.Sleep(2*time.Second)
 		
 	}
 }

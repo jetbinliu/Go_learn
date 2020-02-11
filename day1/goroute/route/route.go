@@ -2,8 +2,8 @@ package route
 
 import "fmt"
 
-func Route(chain chan int){
+func Route(a int){
 
-	result := <- chain
-	fmt.Println(result)
+	//result := <- chain
+	fmt.Println(a)
 }
