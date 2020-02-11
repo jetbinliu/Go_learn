@@ -8,7 +8,7 @@ import (
 func main(){
 
 	c := make(chan int,1)
-	goroute.Add(1,2,c)
+	go goroute.Add(1,2,c)
 	s := <- c
     fmt.Println(s)
 }
