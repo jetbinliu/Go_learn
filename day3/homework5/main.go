@@ -85,3 +85,5 @@ func main() {
 	strNumber2 := strings.TrimSpace(strSlice[1])
 	fmt.Println(multi(strNumber1, strNumber2))
 }
+
+test
