@@ -9,3 +9,4 @@ func main(){
 	fmt.Println("name is :", a.Name)
 	fmt.Println("age is :", a.Age)
 }
+
