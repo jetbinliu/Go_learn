@@ -1,9 +1,14 @@
 package main
 
-import "go_git/Go_learn/day1/goroute_example/calc"
+import (
+	"fmt"
+	"go_git/Go_learn/day1/goroute_example/goroute"
+)
 
-func main() {
+func main(){
 
-	calc.Add(1,2)
-	calc.Sub(1,2)
+	c := make(chan int,1)
+	go goroute.Add(1,2,c)
+	s := <- c
+    fmt.Println(s)
 }
