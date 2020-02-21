@@ -1,3 +1,4 @@
+//模拟加法，支持大数（长度超过int64）
 package main
 
 import (
@@ -14,6 +15,7 @@ func multi(str1, str2 string) (result string) {
 		return
 	}
 
+	//求2个数最后一位的序号
 	var index1 = len(str1) - 1
 	var index2 = len(str2) - 1
 	var left int
@@ -83,7 +85,5 @@ func main() {
 
 	strNumber1 := strings.TrimSpace(strSlice[0])
 	strNumber2 := strings.TrimSpace(strSlice[1])
-	fmt.Println(multi(strNumber1, strNumber2))
+	fmt.Println("=",multi(strNumber1, strNumber2))
 }
-
-test
