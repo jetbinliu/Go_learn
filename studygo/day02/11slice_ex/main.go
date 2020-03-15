@@ -15,6 +15,6 @@ func main() {
 
 	a1 := [...]int{4, 1, 9, 7, 3}
 	fmt.Printf("%T\n", a1)
-	sort.Ints(a1[:])
-	fmt.Printf("%T\n", a1)
+	sort.Ints(a1[:]) //对切片进行排序
+	fmt.Println(a1)
 }
