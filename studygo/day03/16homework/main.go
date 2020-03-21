@@ -25,10 +25,38 @@ func dispatchCoin() (left int) {
 	//2.拿到一个人名，根据金币的规则分金币
 	//2.1 每个人的金币数应该保存到distribution中
 	//2.2 还要记录剩余的金币数
-	return
+	fmt.Println("coins int:", coins)
+	usersMap := make(map[string]int, 20)
+	for _, user := range users {
+		//fmt.Println(user)
+		usersMap[user] = 0
+		for _, str := range user {
+			switch str {
+			case 'e', 'E':
+				usersMap[user] = usersMap[user] + 1
+				coins = coins - 1
+			case 'i', 'I':
+				usersMap[user] = usersMap[user] + 2
+				coins = coins - 2
+			case 'o', 'O':
+				usersMap[user] = usersMap[user] + 3
+				coins = coins - 3
+			case 'u', 'U':
+				usersMap[user] = usersMap[user] + 4
+				coins = coins - 4
+			}
+
+		}
+	}
+
+	fmt.Println(usersMap)
+	//fmt.Println("coins end:", coins)
+	return coins
 }
 
 func main() {
 	left := dispatchCoin()
 	fmt.Println("剩下：", left)
+	//dispatchCoin()
+
 }
