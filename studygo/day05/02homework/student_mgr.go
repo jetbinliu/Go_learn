@@ -58,7 +58,7 @@ func (s studentMgr) editStudents() {
 	fmt.Print("请输入学生的新名字：")
 	var newName string
 	fmt.Scanln(&newName)
-	//s.allStudent[stuID] = newName
+	//s.allStudent[stuID].name = newName ??????
 	stuObj.name = newName
 	s.allStudent[stuID] = stuObj
 }
