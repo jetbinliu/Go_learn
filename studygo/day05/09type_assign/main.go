@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// 类型断言
+// 类型断言：想知道空接口接收的值的类型
 // 类型断言1
 func assign(a interface{}) {
 	fmt.Printf("%T\n", a)
