@@ -15,7 +15,8 @@ func main() {
 		fmt.Println("open file failed,err:", err)
 		return
 	}
-	fmt.Println(fileObj)
+	log.SetOutput(fileObj)
+	//fmt.Println(fileObj)
 
 	for {
 		log.Println("这是一条测试的日志")
