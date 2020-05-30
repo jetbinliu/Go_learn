@@ -8,12 +8,20 @@ import (
 	"strings"
 )
 
-//
-
+// LogLevel ...
 type LogLevel uint16
 
+// Logger 使用接口
+type Logger interface {
+	Debug(format string, a ...interface{})
+	Info(format string, a ...interface{})
+	Warnning(format string, a ...interface{})
+	Error(format string, a ...interface{})
+}
+
+// 定义日志级别
 const (
-	// 定义日志级别
+	// DEBUG ...
 	DEBUG LogLevel = iota
 	TRACE
 	INFO
